@@ -1,6 +1,6 @@
 # Smart Translation VSCode 插件
 
-Smart Translation 是一款为 VSCode 开发的智能翻译插件，提供便捷的代码注释和文档翻译功能。
+Smart Translation 是一款为 VSCode 开发的智能翻译插件，基于大模型技术，提供便捷的中英文翻译功能。
 
 ## 功能特性
 
@@ -65,13 +65,13 @@ Smart Translation 是一款为 VSCode 开发的智能翻译插件，提供便捷
 ### 智谱 GLM-4（推荐）
 - 提供免密钥体验版，无需注册即可使用
 - 支持 API 密钥模式，注册后获取密钥可享受更稳定的服务
-- 基于智谱 GLM-4-Flash 大型语言模型
+- 基于智谱 GLM-4 大模型
 - 翻译质量高，速度快
 - [注册获取 API 密钥](https://www.bigmodel.cn/invite?icode=k7Ec6USMTbEd4du4ZxULXpmwcr074zMJTpgMb8zZZvg%3D)
 
 ### DeepSeek
 - 需要 API 密钥和充值
-- 基于 DeepSeek 大型语言模型
+- 基于 DeepSeek 大模型
 - 支持多种语言翻译
 - [注册获取 API 密钥](https://platform.deepseek.com/)
 

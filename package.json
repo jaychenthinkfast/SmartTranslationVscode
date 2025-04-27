@@ -2,7 +2,7 @@
   "name": "smarttranslation",
   "displayName": "SmartTranslation",
   "description": "智能翻译插件，使用大模型进行中英文互译",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "publisher": "JayChen",
   "engines": {
     "vscode": "^1.85.0"
@@ -104,5 +104,6 @@
   },
   "dependencies": {
     "axios": "^1.6.7"
-  }
+  },
+  "icon": "resources/icon.png"
 } 
