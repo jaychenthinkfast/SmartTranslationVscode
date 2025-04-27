@@ -1,0 +1,108 @@
+{
+  "name": "smarttranslation",
+  "displayName": "SmartTranslation",
+  "description": "智能翻译插件，使用大模型进行中英文互译",
+  "version": "0.0.1",
+  "publisher": "JayChen",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaychenthinkfast/SmartTranslationVscode.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smart-translation.translate",
+        "title": "Smart Translation: 翻译选中文本"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "smart-translation.translate",
+        "key": "ctrl+alt+t",
+        "mac": "cmd+alt+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "smart-translation.translate",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Smart Translation",
+      "properties": {
+        "smartTranslation.translationEngine": {
+          "type": "string",
+          "enum": ["glm", "deepseek"],
+          "default": "glm",
+          "description": "选择翻译引擎"
+        },
+        "smartTranslation.glmApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "智谱 GLM API 密钥"
+        },
+        "smartTranslation.deepseekApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "DeepSeek API 密钥"
+        },
+        "smartTranslation.timeout": {
+          "type": "number",
+          "default": 10000,
+          "description": "请求超时时间（毫秒）"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "smartTranslationSidebar",
+          "title": "智能翻译",
+          "icon": "resources/translate.svg"
+        }
+      ]
+    },
+    "views": {
+      "smartTranslationSidebar": [
+        {
+          "id": "smartTranslationView",
+          "name": "智能翻译"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-electron": "^2.3.9"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+} 

@@ -1,0 +1,41 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled output
+out/
+dist/
+lib/
+*.js
+*.js.map
+*.tsbuildinfo
+
+# VSCode settings
+.vscode/
+.history/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+*.lcov
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Mac
+Icon?
+
+# 发布脚本
+publish.sh 
+
+*.vsix
